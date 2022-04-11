@@ -5,15 +5,15 @@ import app from '../../firebase.init';
 // import useFirebase from '../hooks/useFirebase';
 
 const auth = getAuth(app);
-const Home = () => {
+const Products = () => {
     // const { user } = useFirebase();
     const [user] = useAuthState(auth);
     return (
         <div>
-            <h2>This is Home</h2>
-            <p>Current user is: {user ? user.displayName : 'No body'}</p>
+            <h2>Knock knock ! who is there</h2>
+            <h5>{user ? user.displayName : 'Ghost...'}</h5>
         </div>
     );
 };
 
-export default Home;
+export default Products;
