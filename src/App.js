@@ -17,12 +17,16 @@ function App() {
         <Route path='/home' element={<Home></Home>}>Home</Route>
         <Route path='/register' element={<Register></Register>}>Register</Route>
         <Route path='/login' element={<Login></Login>}>Login</Route>
+        <Route path='/products' element={
+          <RequireAuth>
+            <Products></Products>
+          </RequireAuth>
+        }>Products</Route>
         <Route path='/orders' element={
           <RequireAuth>
             <Orders></Orders>
           </RequireAuth>
         }>Orders</Route>
-        <Route path='/products' element={<Products></Products>}>Products</Route>
       </Routes>
     </div>
   );
